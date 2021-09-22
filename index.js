@@ -1,3 +1,11 @@
+function trimmer(el) {
+  try {
+    return $(el).text().trim().replace(/\n|\r/gm,' ').replace(/\s\s+/g, ' ');
+  } catch (error) {
+    return '';
+  }
+}
+
 function parseHeadlessTable(sel){
   let rows = $(sel).find('table').find('tbody > tr ').toArray()
   let values = rows.map(row=>{
