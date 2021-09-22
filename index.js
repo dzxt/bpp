@@ -15,5 +15,5 @@ function parseHeadlessTable(sel){
       return record
     },[])
   })
-  return values
+  return new Map(values)
 }
